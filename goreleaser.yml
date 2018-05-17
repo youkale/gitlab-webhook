@@ -1,0 +1,27 @@
+# goreleaser.yml
+# Build customization
+build:
+  main: main.go
+  binary: gitlab-webhook
+  goos:
+    - windows
+    - darwin
+    - linux
+  goarch:
+    - amd64
+  ldflags: -s -w
+release:
+  github:
+    owner: mokeoo
+    name: gitlab-webhook
+# Archive customization
+archive:
+  format: tar.gz
+  replacements:
+    amd64: 64-bit
+    darwin: macOS
+  files:
+    - config.json
+    - README.md
+    - LICENSE.md
+    - CHANGELOG.md
