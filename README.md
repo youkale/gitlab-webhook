@@ -3,19 +3,23 @@
 ### config.json
 ```
 {
-  "address":"0.0.0.0:8964",  //server and port
-  "path":"/webhook",   // http listen path
-  "repositories":[
+  "address": "0.0.0.0:8964",
+  "path": "/webhook",
+  "secret_token": "2575079e53e0605b24b1bd8df2e2f757",
+  "settings": [
     {
-      "name":"mofa-core", //repository name
-      "event":"Pipeline Hook", // gitlab webhook event
-      "command":[
-        "ls -al"   // exec cmd
+      "event": "Job Hook",
+      "project_name": "hyd-admin",
+      "build_name": "qm-build",
+      "build_stage": "build",
+      "build_status": "success",
+      "ref": "-test",
+      "command": [
+        "ls -al"
       ]
     }
   ]
 }
-
 
 ```
 
