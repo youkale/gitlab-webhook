@@ -1,11 +1,11 @@
 package main
 
 import (
-	"testing"
-	"net/http/httptest"
-	"net/http"
 	"bufio"
 	"bytes"
+	"net/http"
+	"net/http/httptest"
+	"testing"
 )
 
 //var c = config.GetConfig()
@@ -21,7 +21,7 @@ func BenchmarkEventHandler_ServeHTTP(b *testing.B) {
 	serve := httptest.NewServer(&eventHandler{})
 	defer serve.Close()
 	for i := 0; i < b.N; i++ {
-		if !newRequest(serve.URL, serve.Client()){
+		if !newRequest(serve.URL, serve.Client()) {
 			b.Fatal("has error")
 		}
 	}

@@ -1,7 +1,7 @@
 package event
 
 import (
-	"github.com/mokeoo/gitlab-webhook/config"
+	"github.com/youkale/gitlab-webhook/config"
 	"errors"
 )
 

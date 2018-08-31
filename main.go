@@ -1,12 +1,12 @@
 package main
 
 import (
-	"net/http"
-	"github.com/mokeoo/gitlab-webhook/event"
-	"github.com/mokeoo/gitlab-webhook/config"
-	"io/ioutil"
 	"encoding/json"
+	"github.com/youkale/gitlab-webhook/config"
+	"github.com/youkale/gitlab-webhook/event"
+	"io/ioutil"
 	"log"
+	"net/http"
 )
 
 const XGitlabEventHeaderName = "X-Gitlab-Event"
